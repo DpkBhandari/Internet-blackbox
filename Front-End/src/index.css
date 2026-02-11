@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  /* =========================
+     LIGHT MODE
+  ========================== */
+
+  --color-mainBg: #f9fafb;
+  --color-cardBg: #ffffff;
+  --color-border: #e5e7eb;
+
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-accent-soft: #dbeafe;
+
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+  --color-danger: #dc2626;
+
+  /* =========================
+     DARK MODE
+  ========================== */
+
+  --color-dark-mainBg: #0f172a;
+  --color-dark-cardBg: #1e293b;
+  --color-dark-border: #334155;
+
+  --color-dark-text-primary: #f1f5f9;
+  --color-dark-text-secondary: #94a3b8;
+
+  --color-dark-accent: #2563eb;
+  --color-dark-accent-hover: #1d4ed8;
+  --color-dark-accent-soft: #1e3a8a;
+}
