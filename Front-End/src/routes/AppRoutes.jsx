@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 /* Public Pages */
 import Landing from "../pages/public/Landing";
@@ -29,9 +29,13 @@ const AppRoutes = () => {
   return (
     <Routes>
       {/* Public Routes */}
-      <Route element={<PublicLayout />}>
-        <Route path="/" element={<Landing />} />
-        <Route path="/about" element={<About />} />
+      <Route path="/" element={<PublicLayout />}>
+        <Route index element={<Landing />} />
+        <Route path="about" element={<About />} />
+
+        {/* Redirects */}
+        <Route path="home" element={<Navigate to="/" replace />} />
+        <Route path="landing" element={<Navigate to="/" replace />} />
       </Route>
 
       {/* Auth Routes */}
