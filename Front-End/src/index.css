@@ -31,7 +31,41 @@
   --color-dark-text-primary: #f1f5f9;
   --color-dark-text-secondary: #94a3b8;
 
-  --color-dark-accent: #2563eb;
-  --color-dark-accent-hover: #1d4ed8;
-  --color-dark-accent-soft: #1e3a8a;
+  --color-dark-accent: #60a5fa;
+  --color-dark-accent-hover: #1e3a8a;
+  --color-dark-accent-soft: #1e40af;
+}
+
+/* Selection Styles */
+::selection {
+  background-color: rgba(37, 99, 235, 0.3);
+  color: #bad0ff;
+}
+
+::-moz-selection {
+  background-color: rgba(37, 99, 235, 0.3);
+  color: #111827;
+}
+
+.dark ::selection {
+  background-color: rgba(37, 99, 235, 0.4);
+  color: #f1f5f9;
+}
+
+.dark ::-moz-selection {
+  background-color: rgba(37, 99, 235, 0.4);
+  color: #f1f5f9;
+}
+
+/* Special styling for code blocks */
+pre::selection,
+code::selection {
+  background-color: rgba(37, 99, 235, 0.4);
+  color: #ffffff;
+}
+
+.dark pre::selection,
+.dark code::selection {
+  background-color: rgba(37, 99, 235, 0.5);
+  color: #ffffff;
 }
