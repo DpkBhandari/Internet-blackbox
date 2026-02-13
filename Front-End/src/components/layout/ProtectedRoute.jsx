@@ -1,7 +1,12 @@
-import React from "react";
+import { Outlet } from "react-router-dom";
 
 function ProtectedRoute() {
-  return <div>ProtectedRoute</div>;
+  return (
+    <div>
+      {" "}
+      <Outlet />
+    </div>
+  );
 }
 
 export default ProtectedRoute;
