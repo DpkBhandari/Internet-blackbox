@@ -4,6 +4,10 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Landing from "../pages/public/Landing";
 import About from "../pages/public/About";
 import NotFound from "../pages/public/NotFound";
+import Features from "../pages/public/Features";
+import Security from "../pages/public/Security";
+import Privacy from "../pages/public/Privacy";
+import Terms from "../pages/public/Terms";
 
 /* Auth Pages */
 import Login from "../pages/auth/Login";
@@ -32,6 +36,10 @@ const AppRoutes = () => {
       <Route path="/" element={<PublicLayout />}>
         <Route index element={<Landing />} />
         <Route path="about" element={<About />} />
+        <Route path="features" element={<Features />} />
+        <Route path="security" element={<Security />} />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="terms" element={<Terms />} />
 
         {/* Redirects */}
         <Route path="home" element={<Navigate to="/" replace />} />

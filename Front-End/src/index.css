@@ -38,7 +38,7 @@
 
 /* Selection Styles */
 ::selection {
-  background-color: rgba(37, 99, 235, 0.3)
+  background-color: rgba(37, 99, 235, 0.3);
   color: #bad0ff;
 }
 
