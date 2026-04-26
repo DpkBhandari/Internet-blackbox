@@ -7,7 +7,7 @@ import {
 import {
   TrendingUp, AlertTriangle, Radio, Search, Bell, Settings, User,
   Shield, Download, Upload, Users, Terminal, Bug, Wifi,
-  Filter, RefreshCw, ExternalLink, ChevronRight, CheckCircle,
+  Filter, RefreshCw, ExternalLink,Activity, ChevronRight, CheckCircle,
   Clock, Database, Zap, Globe, Lock, Key, Palette, Bell as BellIcon,
   Play, Pause, Trash2, Eye, Edit3, XCircle, MoreVertical, FileText
 } from 'lucide-react'
@@ -24,7 +24,11 @@ import { useAuthStore, useNotificationStore } from '../store'
 // ======= VIRAL TRENDS =======
 export const ViralTrendsPage: React.FC = () => {
   const [sortBy, setSortBy] = useState<'virality' | 'posts' | 'growth'>('virality')
-  const sorted = [...mockTopics].sort((a, b) => b[sortBy] - (typeof a[sortBy] === 'string' ? 0 : a[sortBy] as number))
+ const sorted = [...mockTopics].sort((a, b) => {
+  const valA = typeof a[sortBy] === "number" ? (a[sortBy] as number) : 0;
+  const valB = typeof b[sortBy] === "number" ? (b[sortBy] as number) : 0;
+  return valB - valA;
+});
 
   return (
     <div className="space-y-6">
