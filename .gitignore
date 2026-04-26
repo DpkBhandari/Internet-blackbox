@@ -1,0 +1,74 @@
+# ---------- OS / Editor ----------
+
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# ---------- Node ----------
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- Env / Secrets ----------
+
+.env
+.env.*
+!.env.example
+
+# ---------- Build / Dist ----------
+
+dist/
+build/
+out/
+coverage/
+
+# ---------- TypeScript ----------
+
+*.tsbuildinfo
+
+# ---------- Uploads / Runtime Data ----------
+
+uploads/
+logs/
+*.sqlite
+*.db
+
+# ---------- Docker ----------
+
+docker-compose.override.yml
+*.pid
+
+# ---------- Mongo / Redis data (local mounts) ----------
+
+mongo_data/
+redis_data/
+
+# ---------- Frontend ----------
+
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ---------- Backend ----------
+
+ibb-backend/node_modules/
+ibb-backend/dist/
+
+# ---------- Python ----------
+
+**pycache**/
+*.pyc
+.venv/
+venv/
+
+# ---------- Misc ----------
+
+.cache/
+.temp/
